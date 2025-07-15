@@ -137,3 +137,12 @@ divs.forEach((div, i) => {
     });
   }
 });
+
+
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY % 2 === 0) {
+    console.log('Even scroll position:', scrollY);
+  }
+});
