@@ -103,3 +103,9 @@ document.addEventListener('click', () => {
 
 
 
+document.addEventListener('keypress', (event) => {
+  const key = event.key;
+  if (!isNaN(key) && Number(key) % 2 === 0) {
+    console.log(`You pressed an even number key: ${key}`);
+  }
+});
