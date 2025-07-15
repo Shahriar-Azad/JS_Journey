@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <style>
+
+        /* *{
+            background-color: rgb(0, 0, 0);
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            border: 20px solid rgb(255, 255, 255);
+            text-align: start;
+            justify-content: center;
+            align-items: center;
+        }
+        .list-items{
+            text-decoration: none;
+            list-style: none;
+            font-size: 40px;
+            font-weight: 900;
+            background-color: white;
+            width: 700px;
+            margin-top: 10px;
+            text-align: center;
+
+
+        }
+        #main-container{
+            font-size: 50px;
+            color: white;
+           font-family: "Inter", sans-serif;
+        } */
+
+
+        /* h1{
+            text-align: center;
+            font-family: "Inter", sans-serif;
+        }
+        .container{
+            display: flex;
+
+
+
+        }
+
+        .box-1, .box-2, .box-3{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid salmon;
+            margin: 20px;
+            gap: 50px;
+        
+        }
+        button{
+            margin: 20px;
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            border-color: rgb(255, 0, 0);
+        } */
+
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            padding: 30px;
+        }
+        .reveal-btn{
+            padding: 50px;
+            font-size: 20px;
+            margin: 30px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .hidden-content{
+            display: none;
+
+        }
+        .hidden-content.reveal-btn{
+            display: block;
+            
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="container">
+        <h1 id="main-container">Favorite Movie Franchise</h1>
+
+
+        <ul>
+            <li class="list-items">The Matrix</li>
+            <li class="list-items">Star Wars</li>
+            <li class="list-items">Harry Potter</li>
+            <li class="list-items">Lord of the Rings</li>
+            <li class="list-items">Marvel</li>
+        </ul>
+
+    </div> -->
+
+    <!-- <h1 id="main-heading">Event Listeners</h1>
+    <div class="container">
+        <div class="box-1">
+            <h1 id="heading">Example 1</h1>
+            <button onclick="alert('i love u')">Enter</button>
+        </div>
+                <div class="box-2">
+            <h1 id="heading">Example 2</h1>
+            <button onclick="alert('how are u?')">Enter</button>
+        </div>
+                <div class="box-3">
+            <h1 id="heading">Example 3</h1>
+            <button class="btn-3">Enter</button>
+        </div>
+    </div>
+     -->
+
+    <h1 id="main-heading">Event Listeners</h1>
+
+    <div class="container">
+        <button class="reveal-btn">Reveal More</button>
+
+        <div class="hidden-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus consectetur, tempora voluptates asperiores unde laborum itaque, quos iure culpa animi veritatis eveniet. Fugit, omnis. Dolores magnam modi corrupti molestiae.
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
