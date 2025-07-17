@@ -20,3 +20,17 @@ document.addEventListener('keypress', (event) => {
   }
 });
 
+
+let count = 0;
+document.addEventListener('click', () => {
+  count++;
+  if (count % 2 === 0) console.log('Even click:', count);
+});
+
+// 2. Keydown event, logs only if pressed key is an even number
+document.addEventListener('keydown', (e) => {
+  const key = e.key;
+  if (!isNaN(key) && Number(key) % 2 === 0) {
+    console.log('Even number key pressed:', key);
+  }
+});
