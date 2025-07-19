@@ -1,15 +1,39 @@
-function add(x,y){
-    return x+y
+// function add(x,y){
+//     return x+y
+// }
+// function subtract(x,y){
+//     return x-y
+// }
+// function multiply(x,y){
+//     return x*y
+// }
+// function divide(x,y){
+//     return Math.floor(x/y)
+// }
+
+
+// console.log(divide(5,2))
+
+
+function isEven(number){
+    return number % 2 === 0 ? true : false;
 }
-function subtract(x,y){
-    return x-y
-}
-function multiply(x,y){
-    return x*y
-}
-function divide(x,y){
-    return Math.floor(x/y)
+
+console.log(isEven(10))
+
+
+
+
+function isValidEmail(mail){
+    if(mail.includes("@")){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 
-console.log(divide(5,2))
+
+console.log(isValidEmail("bro123@gmail.com"));
+
