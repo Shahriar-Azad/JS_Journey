@@ -83,3 +83,22 @@ document.addEventListener('keydown', (e) => {
     console.log('Even number key pressed:', key);
   }
 });
+
+
+
+const divs = document.querySelectorAll('div');
+divs.forEach((div, i) => {
+  if ((i + 1) % 2 === 0) {
+    div.addEventListener('mouseover', () => {
+      console.log('Hovered on even div index:', i);
+    });
+  }
+});
+
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY % 2 === 0) {
+    console.log('Even scroll position:', scrollY);
+  }
+});
