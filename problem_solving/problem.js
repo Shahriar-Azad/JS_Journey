@@ -72,22 +72,40 @@
 
 
 
-function memoize(fn) {
-  const cache = {}; // store previous results
+// function memoize(fn) {
+//   const cache = {}; // store previous results
 
-  return function (...args) {
-    const key = JSON.stringify(args); // convert arguments to a unique key
+//   return function (...args) {
+//     const key = JSON.stringify(args); // convert arguments to a unique key
 
-    if (cache[key]) {
-      console.log("Returning from cache for:", key);
-      return cache[key];
-    }
+//     if (cache[key]) {
+//       console.log("Returning from cache for:", key);
+//       return cache[key];
+//     }
 
-    const result = fn.apply(this, args);
-    cache[key] = result;
-    return result;
-  };
-}
+//     const result = fn.apply(this, args);
+//     cache[key] = result;
+//     return result;
+//   };
+// }
+
+
+const original = {
+  name: "Azad",
+  details: {
+    age: 22,
+    city: "Dhaka"
+  }
+};
+
+// Shallow copy using Object.assign
+const shallowCopy = Object.assign({}, original);
+
+// Modify nested property
+shallowCopy.details.city = "Chittagong";
+
+console.log(original.details.city); // "Chittagong" 😬 (original is affected!)
+
 
 
 
