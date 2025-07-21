@@ -40,21 +40,35 @@
 // }
 
 
-function createCounter() {
-  let count = 0; // this variable is "remembered" by the inner function
+// function createCounter() {
+//   let count = 0; // this variable is "remembered" by the inner function
 
-  return function () {
-    count += 1;
-    return count;
-  };
+//   return function () {
+//     count += 1;
+//     return count;
+//   };
+// }
+
+// // Create a counter
+// const counter = createCounter();
+
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+// console.log(counter()); // 3
+
+
+function customMap(array, callback) {
+  let result = [];
+
+  // Loop through each element in the array
+  for (let i = 0; i < array.length; i++) {
+    // Call the callback on each element and push to result
+    result.push(callback(array[i], i, array));
+  }
+
+  return result;
 }
 
-// Create a counter
-const counter = createCounter();
-
-console.log(counter()); // 1
-console.log(counter()); // 2
-console.log(counter()); // 3
 
 
 
