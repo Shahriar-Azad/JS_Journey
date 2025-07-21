@@ -57,18 +57,37 @@
 // console.log(counter()); // 3
 
 
-function customMap(array, callback) {
-  let result = [];
+// function customMap(array, callback) {
+//   let result = [];
 
-  // Loop through each element in the array
-  for (let i = 0; i < array.length; i++) {
-    // Call the callback on each element and push to result
-    result.push(callback(array[i], i, array));
-  }
+//   // Loop through each element in the array
+//   for (let i = 0; i < array.length; i++) {
+//     // Call the callback on each element and push to result
+//     result.push(callback(array[i], i, array));
+//   }
 
-  return result;
+//   return result;
+// }
+
+
+
+
+function memoize(fn) {
+  const cache = {}; // store previous results
+
+  return function (...args) {
+    const key = JSON.stringify(args); // convert arguments to a unique key
+
+    if (cache[key]) {
+      console.log("Returning from cache for:", key);
+      return cache[key];
+    }
+
+    const result = fn.apply(this, args);
+    cache[key] = result;
+    return result;
+  };
 }
-
 
 
 
