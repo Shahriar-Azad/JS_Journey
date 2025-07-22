@@ -108,56 +108,66 @@
 
 
 
-import React, { useState } from "react";
-import "./TodoApp.css";
+// import React, { useState } from "react";
+// import "./TodoApp.css";
 
-function App() {
-  const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
+// function App() {
+//   const [task, setTask] = useState("");
+//   const [todos, setTodos] = useState([]);
 
-  const addTask = (e) => {
-    e.preventDefault();
-    if (task.trim() === "") return;
-    setTodos([...todos, { text: task, completed: false }]);
-    setTask("");
-  };
+//   const addTask = (e) => {
+//     e.preventDefault();
+//     if (task.trim() === "") return;
+//     setTodos([...todos, { text: task, completed: false }]);
+//     setTask("");
+//   };
 
-  const toggleComplete = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
-  };
+//   const toggleComplete = (index) => {
+//     const newTodos = [...todos];
+//     newTodos[index].completed = !newTodos[index].completed;
+//     setTodos(newTodos);
+//   };
 
-  const deleteTask = (index) => {
-    const newTodos = todos.filter((_, i) => i !== index);
-    setTodos(newTodos);
-  };
+//   const deleteTask = (index) => {
+//     const newTodos = todos.filter((_, i) => i !== index);
+//     setTodos(newTodos);
+//   };
 
-  return (
-    <div className="todo-container">
-      <h2>📝 To-Do App</h2>
-      <form onSubmit={addTask}>
-        <input
-          type="text"
-          placeholder="Enter a task..."
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-        />
-        <button type="submit">Add</button>
-      </form>
+//   return (
+//     <div className="todo-container">
+//       <h2>📝 To-Do App</h2>
+//       <form onSubmit={addTask}>
+//         <input
+//           type="text"
+//           placeholder="Enter a task..."
+//           value={task}
+//           onChange={(e) => setTask(e.target.value)}
+//         />
+//         <button type="submit">Add</button>
+//       </form>
 
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index} className={todo.completed ? "completed" : ""}>
-            <span onClick={() => toggleComplete(index)}>{todo.text}</span>
-            <button onClick={() => deleteTask(index)}>❌</button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+//       <ul>
+//         {todos.map((todo, index) => (
+//           <li key={index} className={todo.completed ? "completed" : ""}>
+//             <span onClick={() => toggleComplete(index)}>{todo.text}</span>
+//             <button onClick={() => deleteTask(index)}>❌</button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
+
+
+// index.js:
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 
