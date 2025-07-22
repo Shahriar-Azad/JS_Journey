@@ -163,11 +163,54 @@
 
 // index.js:
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App />);
+
+
+import React, { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0); // initial state is 0
+
+  const increase = () => setCount(count + 1);
+  const decrease = () => setCount(count - 1);
+  const reset = () => setCount(0);
+
+  return (
+    <div style={styles.container}>
+      <h2>🔢 Simple Counter</h2>
+      <h1>{count}</h1>
+      <div>
+        <button onClick={increase} style={styles.button}>Increase</button>
+        <button onClick={decrease} style={styles.button}>Decrease</button>
+        <button onClick={reset} style={styles.button}>Reset</button>
+      </div>
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    marginTop: '50px',
+    fontFamily: 'sans-serif'
+  },
+  button: {
+    margin: '10px',
+    padding: '10px 20px',
+    fontSize: '16px',
+    borderRadius: '5px',
+    border: 'none',
+    backgroundColor: '#4caf50',
+    color: 'white',
+    cursor: 'pointer'
+  }
+};
+
+export default App;
 
 
