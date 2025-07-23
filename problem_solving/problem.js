@@ -215,9 +215,19 @@
 
 
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />);
+
+
+// just to commit----->
+
+
+function add(a,b){
+    return a + b;
+}
+
+add(10,20)
