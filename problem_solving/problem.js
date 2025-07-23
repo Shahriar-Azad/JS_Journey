@@ -226,8 +226,18 @@
 // just to commit----->
 
 
-function add(a,b){
-    return a + b;
+// function add(a,b){
+//     return a + b;
+// }
+
+// add(10,20)
+
+
+function sub(a,b){
+
+    return a - b;
+
 }
 
-add(10,20)
+
+sub(20,10)
