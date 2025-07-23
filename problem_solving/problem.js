@@ -233,11 +233,20 @@
 // add(10,20)
 
 
-function sub(a,b){
+// function sub(a,b){
 
-    return a - b;
+//     return a - b;
 
+// }
+
+
+// sub(20,10)
+
+
+
+
+function mul(a,b){
+    return a * b;
 }
 
-
-sub(20,10)
+mul(10,20)
