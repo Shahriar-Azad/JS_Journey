@@ -253,13 +253,22 @@
 
 
 
-const quotes = [
-  "Stay hungry, stay foolish.",
-  "Code is like humor. When you have to explain it, it’s bad.",
-  "First, solve the problem. Then, write the code.",
-  "Experience is the name everyone gives to their mistakes.",
-  "JavaScript: the world's most misunderstood programming language."
-];
+// const quotes = [
+//   "Stay hungry, stay foolish.",
+//   "Code is like humor. When you have to explain it, it’s bad.",
+//   "First, solve the problem. Then, write the code.",
+//   "Experience is the name everyone gives to their mistakes.",
+//   "JavaScript: the world's most misunderstood programming language."
+// ];
 
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-console.log("💬 Random Quote:", randomQuote);
+// const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+// console.log("💬 Random Quote:", randomQuote);
+
+
+function isPalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return cleaned === cleaned.split("").reverse().join("");
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+console.log(isPalindrome("hello")); // false
