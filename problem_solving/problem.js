@@ -245,8 +245,21 @@
 
 
 
-function mul(a,b){
-    return a * b;
-}
+// function mul(a,b){
+//     return a * b;
+// }
 
-mul(10,20)
+// mul(10,20)
+
+
+
+const quotes = [
+  "Stay hungry, stay foolish.",
+  "Code is like humor. When you have to explain it, it’s bad.",
+  "First, solve the problem. Then, write the code.",
+  "Experience is the name everyone gives to their mistakes.",
+  "JavaScript: the world's most misunderstood programming language."
+];
+
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+console.log("💬 Random Quote:", randomQuote);
