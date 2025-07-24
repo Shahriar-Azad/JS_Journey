@@ -275,14 +275,28 @@
 
 
 
-function debounce(fn, delay) {
-  let timeoutId;
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
+// function debounce(fn, delay) {
+//   let timeoutId;
+//   return function (...args) {
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(() => fn.apply(this, args), delay);
+//   };
+// }
 
-// Example
-const log = debounce(() => console.log("Typing stopped..."), 1000);
-window.addEventListener("keydown", log);
+// // Example
+// const log = debounce(() => console.log("Typing stopped..."), 1000);
+// window.addEventListener("keydown", log);
+
+
+Array.prototype.customMap = function (callback) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+
+const numbers = [1, 2, 3];
+const doubled = numbers.customMap(num => num * 2);
+console.log(doubled); // [2, 4, 6]
+
