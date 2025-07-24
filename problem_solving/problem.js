@@ -265,10 +265,24 @@
 // console.log("💬 Random Quote:", randomQuote);
 
 
-function isPalindrome(str) {
-  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-  return cleaned === cleaned.split("").reverse().join("");
+// function isPalindrome(str) {
+//   const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+//   return cleaned === cleaned.split("").reverse().join("");
+// }
+
+// console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+// console.log(isPalindrome("hello")); // false
+
+
+
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
 }
 
-console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
-console.log(isPalindrome("hello")); // false
+// Example
+const log = debounce(() => console.log("Typing stopped..."), 1000);
+window.addEventListener("keydown", log);
