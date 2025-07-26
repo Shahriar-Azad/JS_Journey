@@ -11,10 +11,15 @@
 // console.log(doubled); // [2, 4, 6]
 
 
-Array.prototype.customMap = function (callback) {
-  const result = [];
-  for (let i = 0; i < this.length; i++) {
-    result.push(callback(this[i], i, this));
-  }
-  return result;
-};
+// Array.prototype.customMap = function (callback) {
+//   const result = [];
+//   for (let i = 0; i < this.length; i++) {
+//     result.push(callback(this[i], i, this));
+//   }
+//   return result;
+// };
+
+
+// Example
+const log = debounce(() => console.log("Typing stopped..."), 1000);
+window.addEventListener("keydown", log);
