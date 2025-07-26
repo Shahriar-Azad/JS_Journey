@@ -21,5 +21,13 @@
 
 
 // Example
-const log = debounce(() => console.log("Typing stopped..."), 1000);
-window.addEventListener("keydown", log);
+// const log = debounce(() => console.log("Typing stopped..."), 1000);
+// window.addEventListener("keydown", log);
+
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
