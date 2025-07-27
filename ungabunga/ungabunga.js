@@ -24,10 +24,19 @@
 // const log = debounce(() => console.log("Typing stopped..."), 1000);
 // window.addEventListener("keydown", log);
 
-function debounce(fn, delay) {
-  let timeoutId;
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
+// function debounce(fn, delay) {
+//   let timeoutId;
+//   return function (...args) {
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(() => fn.apply(this, args), delay);
+//   };
+// }
+
+
+let clickCount = 0;
+document.addEventListener('click', () => {
+  clickCount++;
+  if (clickCount % 2 === 0) {
+    console.log(`Clicked an even number of times: ${clickCount}`);
+  }
+});
