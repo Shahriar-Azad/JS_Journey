@@ -91,9 +91,20 @@
 // });
 
 
-document.addEventListener('keydown', (e) => {
-  const key = e.key;
-  if (!isNaN(key) && Number(key) % 2 === 0) {
-    console.log('Even number key pressed:', key);
+// document.addEventListener('keydown', (e) => {
+//   const key = e.key;
+//   if (!isNaN(key) && Number(key) % 2 === 0) {
+//     console.log('Even number key pressed:', key);
+//   }
+// });
+
+
+
+const divs = document.querySelectorAll('div');
+divs.forEach((div, i) => {
+  if ((i + 1) % 2 === 0) {
+    div.addEventListener('mouseover', () => {
+      console.log('Hovered on even div index:', i);
+    });
   }
 });
