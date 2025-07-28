@@ -84,8 +84,16 @@
 // });
 
 
-let count = 0;
-document.addEventListener('click', () => {
-  count++;
-  if (count % 2 === 0) console.log('Even click:', count);
+// let count = 0;
+// document.addEventListener('click', () => {
+//   count++;
+//   if (count % 2 === 0) console.log('Even click:', count);
+// });
+
+
+document.addEventListener('keydown', (e) => {
+  const key = e.key;
+  if (!isNaN(key) && Number(key) % 2 === 0) {
+    console.log('Even number key pressed:', key);
+  }
 });
