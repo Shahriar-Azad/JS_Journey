@@ -66,10 +66,19 @@
 // });
 
 
-let addCount = 0;
-document.addEventListener('click', () => {
-  addCount++;
-  if (addCount % 2 === 0) {
-    console.log(`Clicked an even number of times: ${addCount}`);
+// let addCount = 0;
+// document.addEventListener('click', () => {
+//   addCount++;
+//   if (addCount % 2 === 0) {
+//     console.log(`Clicked an even number of times: ${addCount}`);
+//   }
+// });
+
+
+
+document.addEventListener('keypress', (event) => {
+  const key = event.key;
+  if (!isNaN(key) && Number(key) % 2 === 0) {
+    console.log(`You pressed an even number key: ${key}`);
   }
 });
