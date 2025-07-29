@@ -331,11 +331,28 @@
 // mul(10,20)
 
 
-function createCounter() {
-  let count = 0; // this variable is "remembered" by the inner function
+// function createCounter() {
+//   let count = 0; // this variable is "remembered" by the inner function
 
-  return function () {
-    count += 1;
-    return count;
+//   return function () {
+//     count += 1;
+//     return count;
+//   };
+// }
+
+
+
+
+function debounce(func, delay) {
+  let timeoutId;
+
+  return function(...args) {
+    // Clear the previous timer
+    clearTimeout(timeoutId);
+
+    // Set a new timer
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
   };
 }
