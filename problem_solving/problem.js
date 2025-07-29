@@ -324,8 +324,18 @@
 // console.log(sub(20,10));
 
 
-function mul(a,b){
-    return a * b;
-}
+// function mul(a,b){
+//     return a * b;
+// }
 
-mul(10,20)
+// mul(10,20)
+
+
+function createCounter() {
+  let count = 0; // this variable is "remembered" by the inner function
+
+  return function () {
+    count += 1;
+    return count;
+  };
+}
