@@ -317,8 +317,15 @@
 
 // console.log(add(10,20));
 
-function sub(a,b){
-    return a-b;
+// function sub(a,b){
+//     return a-b;
+// }
+
+// console.log(sub(20,10));
+
+
+function mul(a,b){
+    return a * b;
 }
 
-console.log(sub(20,10));
+mul(10,20)
