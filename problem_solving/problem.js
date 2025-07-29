@@ -308,3 +308,11 @@
 // }
 
 // console.log("Here's a random emoji for you:", getRandomEmoji());
+
+
+
+function add(a,b){
+    return a+b;
+}
+
+console.log(add(10,20));
