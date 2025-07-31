@@ -8,5 +8,14 @@
 
 
 
-const isPrime = n => n > 1 && ![...Array(Math.sqrt(n)).keys()].slice(2).some(i => n % i === 0);
-console.log(isPrime(17));
+// const isPrime = n => n > 1 && ![...Array(Math.sqrt(n)).keys()].slice(2).some(i => n % i === 0);
+// console.log(isPrime(17));
+
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
