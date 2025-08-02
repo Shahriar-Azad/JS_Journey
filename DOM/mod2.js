@@ -31,5 +31,12 @@
 
 
 
-const getRandomItem = arr => arr[Math.floor(Math.random() * arr.length)];
-console.log(getRandomItem(['apple', 'banana', 'cherry'])); 
+// const getRandomItem = arr => arr[Math.floor(Math.random() * arr.length)];
+// console.log(getRandomItem(['apple', 'banana', 'cherry'])); 
+
+
+
+const toTitleCase = str => str.replace(/\w\S*/g, txt => 
+  txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+);
+console.log(toTitleCase('hello world'));
