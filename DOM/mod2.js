@@ -4,5 +4,11 @@
 
 
 
-const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-console.log(shuffle([1,2,3,4,5]));
+// const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+// console.log(shuffle([1,2,3,4,5]));
+
+
+
+
+const isPrime = n => n > 1 && ![...Array(Math.sqrt(n)).keys()].slice(2).some(i => n % i === 0);
+console.log(isPrime(17));
