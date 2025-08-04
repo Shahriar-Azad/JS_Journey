@@ -1,2 +1,8 @@
-const randomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`;
-console.log(randomColor()); // #a3c4f2
+// const randomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`;
+// console.log(randomColor()); // #a3c4f2
+
+
+
+
+const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+console.log(shuffle([1,2,3,4,5]));
