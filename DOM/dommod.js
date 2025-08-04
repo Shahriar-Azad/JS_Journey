@@ -28,6 +28,14 @@
 
 
 
-const deepClone = obj => JSON.parse(JSON.stringify(obj));
-const original = {a: 1, b: {c: 2}};
-const cloned = deepClone(original);
+// const deepClone = obj => JSON.parse(JSON.stringify(obj));
+// const original = {a: 1, b: {c: 2}};
+// const cloned = deepClone(original);
+
+
+
+
+
+
+const getRandomItem = arr => arr[Math.floor(Math.random() * arr.length)];
+console.log(getRandomItem(['apple', 'banana', 'cherry'])); 
